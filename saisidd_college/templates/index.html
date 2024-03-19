@@ -1,0 +1,426 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title1 %}
+active
+{% endblock %}
+
+{% block content %}
+
+<section class="flexslider">
+    <ul class="slides">
+        <li style="background-image: url('/static/img/verbo_corousel1.jpg')" class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="probootstrap-slider-text text-center">
+                <h1 class="probootstrap-heading probootstrap-animate">Your Bright Future is Our Mission</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li style="background-image: url('/static/img/verbo_corousel2.jpg')" class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="probootstrap-slider-text text-center">
+                <h1 class="probootstrap-heading probootstrap-animate">Education is Life</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </li>
+      <li style="background-image: url('/static/img/verbo_corousel3.jpg')" class="overlay">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="probootstrap-slider-text text-center">
+                <h1 class="probootstrap-heading probootstrap-animate">Helping Each of Our Students Fulfill the Potential</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+  
+  <script>
+  $(document).ready(function() {
+  $('.flexslider').flexslider({
+      slideshowSpeed: 1500, // Adjust the speed here (in milliseconds)
+      animation: "slide",
+      controlNav: false,
+      directionNav: true
+    });
+  });
+  </script>
+  
+  <section class="probootstrap-section probootstrap-section-colored" style="background-color: #152c55;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-left section-heading probootstrap-animate">
+          <h2>Welcome to College of Excellence</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="probootstrap-flex-block">
+            <div class="probootstrap-text probootstrap-animate">
+              <h3>About College</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+              <p><a href="{% url 'about' %}" class="btn btn jiggle" style="background-color: #152c55;color: white;">Learn More</a></p>
+            </div>
+            <div class="probootstrap-image probootstrap-animate" style="background-image: url('/static/img/verbo_corousel2.jpg')">
+              <a href="https://vimeo.com/45830194" class="btn-video popup-vimeo"><i class="icon-play3"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section" id="probootstrap-counter">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+          <div class="probootstrap-counter-wrap">
+            <div class="probootstrap-icon">
+              <i class="fa fa-book" style="color: #d8a025;"></i>
+            </div>
+            <div class="probootstrap-text">
+              <span class="probootstrap-counter">
+                <span class="js-counter" data-from="0" data-to="20203" data-speed="5000" data-refresh-interval="50">1</span>
+              </span>
+              <span class="probootstrap-counter-label">Books in Libraries</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+          <div class="probootstrap-counter-wrap">
+            <div class="probootstrap-icon">
+              <i class="icon-user-tie"  style="color: #d8a025;"></i>
+            </div>
+            <div class="probootstrap-text">
+              <span class="probootstrap-counter">
+                <span class="js-counter" data-from="0" data-to="139" data-speed="5000" data-refresh-interval="50">1</span>
+              </span>
+              <span class="probootstrap-counter-label">Certified Teachers</span>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix visible-sm-block visible-xs-block"></div>
+        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+          <div class="probootstrap-counter-wrap">
+            <div class="probootstrap-icon">
+              <i class="icon-library"  style="color: #d8a025;"></i>
+            </div>
+            <div class="probootstrap-text">
+              <span class="probootstrap-counter">
+                <span class="js-counter" data-from="0" data-to="99" data-speed="5000" data-refresh-interval="50">1</span>%
+              </span>
+              <span class="probootstrap-counter-label">Passing to Universities</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+            
+            <div class="probootstrap-counter-wrap">
+            <div class="probootstrap-icon">
+              <i class="icon-smile2"  style="color: #d8a025;"></i>
+            </div>
+            <div class="probootstrap-text">
+              <span class="probootstrap-counter">
+                <span class="js-counter" data-from="0" data-to="100" data-speed="5000" data-refresh-interval="50">1</span>%
+              </span>
+              <span class="probootstrap-counter-label">Parents Satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section probootstrap-section-colored probootstrap-bg probootstrap-custom-heading probootstrap-tab-section" style="background-image: url('/static/img/gal_img_full_1.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center section-heading probootstrap-animate">
+          <h2 class="mb0">Highlights</h2>
+        </div>
+      </div>
+    </div>
+    <div class="probootstrap-tab-style-1">
+      <ul class="nav nav-tabs probootstrap-center probootstrap-tabs no-border">
+        <li class="active"><a data-toggle="tab" href="#featured-news">Featured News</a></li>
+        <li><a data-toggle="tab" href="#upcoming-events">Upcoming Events</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="probootstrap-section probootstrap-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          
+          <div class="tab-content">
+
+            <div id="featured-news" class="tab-pane fade in active">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="owl-carousel" id="owl1">
+                    <div class="item">
+                      <a href="#" class="probootstrap-featured-news-box">
+                        <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel2.jpg' %}" alt="" class="img-responsive"></figure>
+                        <div class="probootstrap-text">
+                          <h3>Tempora consectetur unde nisi</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ut.</p>
+                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                          
+                        </div>
+                      </a>
+                    </div>
+                    <!-- END item -->
+                    <div class="item">
+                      <a href="#" class="probootstrap-featured-news-box">
+                        <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel1.jpg' %}" alt="" class="img-responsive"></figure>
+                        <div class="probootstrap-text">
+                          <h3>Tempora consectetur unde nisi</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, officia.</p>
+                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                          
+                        </div>
+                      </a>
+                    </div>
+                    <!-- END item -->
+                    <div class="item">
+                      <a href="#" class="probootstrap-featured-news-box">
+                        <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel3.jpg' %}" alt="" class="img-responsive"></figure>
+                        <div class="probootstrap-text">
+                          <h3>Tempora consectetur unde nisi</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, dolores.</p>
+                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                          
+                        </div>
+                      </a>
+                    </div>
+                    <!-- END item -->
+                    <div class="item">
+                      <a href="#" class="probootstrap-featured-news-box">
+                        <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel3.jpg' %}" alt="" class="img-responsive"></figure>
+                        <div class="probootstrap-text">
+                          <h3>Tempora consectetur unde nisi</h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, earum.</p>
+                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                          
+                          
+                        </div>
+                      </a>
+                    </div>
+                    <!-- END item -->
+                  </div>
+                </div>
+              </div>
+              <!-- END row -->
+              <!-- <div class="row">
+                <div class="col-md-12 text-center">
+                  <p><a href="#" class="btn btn jiggle" style="background-color: #152c55;color: white;">View all events</a></p>  
+                </div>
+              </div> -->
+            </div>
+            <div id="upcoming-events" class="tab-pane fade">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="owl-carousel" id="owl2">
+                    <div class="item">
+                      <a href="#" class="probootstrap-featured-news-box">
+                        <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel1.jpg' %}" alt="" class="img-responsive"></figure>
+                        <div class="probootstrap-text">
+                          <h3>Tempora consectetur unde nisi</h3>
+                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- END item -->
+                    <div class="item">
+                      <a href="#" class="probootstrap-featured-news-box">
+                        <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel2.jpg' %}" alt="" class="img-responsive"></figure>
+                        <div class="probootstrap-text">
+                          <h3>Tempora consectetur unde nisi</h3>
+                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- END item -->
+                    <div class="item">
+                      <a href="#" class="probootstrap-featured-news-box">
+                        <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel3.jpg' %}" alt="" class="img-responsive"></figure>
+                        <div class="probootstrap-text">
+                          <h3>Tempora consectetur unde nisi</h3>
+                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- END item -->
+                    <div class="item">
+                      <a href="#" class="probootstrap-featured-news-box">
+                        <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel2.jpg' %}" alt="" class="img-responsive"></figure>
+                        <div class="probootstrap-text">
+                          <h3>Tempora consectetur unde nisi</h3>
+                          <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                          <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- END item -->
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="row">
+                <div class="col-md-12 text-center">
+                  <p><a href="#" class="btn btn jiggle" style="background-color: #152c55;color: white;">View all events</a></p>  
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section probootstrap-bg-white probootstrap-border-top" style="background: #152c55">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+          <h2 style="color: white;font-family: 'Times New Roman', Times, serif;font-weight: bold;">Our Featured Courses</h2>
+          <p class="lead" style="color: white;">Sed a repudiandae impedit voluptate nam Deleniti dignissimos perspiciatis nostrum porro nesciunt</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6" >
+          <div class="probootstrap-service-2 probootstrap-animate">
+            <div class="image">
+              <div class="image-bg">
+                <img src="{% static '/img/verbo_corousel3.jpg' %}" alt="">
+              </div>
+            </div>
+            <div class="text">
+              <h3>B.Sc. Nursing</h3>
+              <p> Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
+              <p><a href="{% url 'admission' %}#admission_form" class="btn btn jiggle jiggle1">Enroll now</a> 
+                <a href="{% url 'nursing' %}" class="btn btn jiggle jiggle2">Learn more</a>
+                <span class="enrolled-count">2,928 students enrolled</span></p>
+            </div>
+          </div>
+          <div class="probootstrap-service-2 probootstrap-animate">
+            <div class="image">
+              <div class="image-bg">
+                <img src="{% static '/img/verbo_corousel3.jpg' %}" alt="">
+              </div>
+            </div>
+            <div class="text">
+              <h3>Bachelor of Physiotherapy</h3>
+              <p> Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
+              <p><a href="{% url 'admission' %}#admission_form" class="btn btn jiggle jiggle1">Enroll now</a>
+                <a href="{% url 'pysiotherapy' %}" class="btn btn jiggle jiggle2">Learn more</a>
+                 <span class="enrolled-count">2,928 students enrolled</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 center1">
+          <div class="probootstrap-service-2 probootstrap-animate">
+            <div class="image">
+              <div class="image-bg">
+                <img src="{% static '/img/verbo_corousel3.jpg' %}" alt="">
+              </div>
+            </div>
+            <div class="text">
+              <h3>Bachelor of Pharmacy</h3>
+              <p> Laboriosam pariatur modi praesentium deleniti molestiae officiis atque numquam quos quis nisi voluptatum architecto rerum error.</p>
+              <p><a href="{% url 'admission' %}#admission_form" class="btn btn jiggle jiggle1">Enroll now</a> 
+                <a href="{% url 'pharmacy' %}" class="btn btn jiggle jiggle2">Learn more</a>
+                <span class="enrolled-count">2,928 students enrolled</span></p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="probootstrap-section custom-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate">
+          <h2 style="font-family: 'Times New Roman', Times, serif;color: #152c55;">Empower Your Future with <br>Sai-Sidd</h2>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3 class="hover-effect">Consectetur Adipisicing</h3>
+              <p class="hover-effect1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+            </div>  
+          </div>
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3 class="hover-effect">Consectetur Adipisicing</h3>
+              <p class="hover-effect1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+            </div> 
+          </div>
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3 class="hover-effect">Consectetur Adipisicing</h3>
+              <p class="hover-effect1 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+            </div> 
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3 class="hover-effect">Consectetur Adipisicing</h3>
+              <p class="hover-effect1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+            </div>  
+          </div>
+          
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3 class="hover-effect">Consectetur Adipisicing</h3>
+              <p class="hover-effect1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+            </div> 
+          </div>
+          
+          <div class="service left-icon probootstrap-animate">
+            <div class="icon"><i class="icon-checkmark"></i></div>
+            <div class="text">
+              <h3 class="hover-effect">Consectetur Adipisicing</h3>
+              <p class="hover-effect1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident qui tempore natus quos quibusdam soluta at.</p>
+            </div> 
+          </div>
+
+        </div>
+      </div>
+      <!-- END row -->
+    </div>
+  </section>
+
+{% endblock %}

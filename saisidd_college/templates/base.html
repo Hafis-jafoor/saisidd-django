@@ -1,0 +1,188 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sai-Sidd Group Of Institution | Explore Our Innovations</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- webicon -->
+    <link rel="website icon" type="jpg" href="{% static '/img/fth.png' %}">
+    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/styles-merged.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/custom.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style1.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+</head>
+<body>
+    
+  <div class="container-fluid screen">
+    <!-- Fixed navbar -->
+    <div class="probootstrap-header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-9 col-sm-9 probootstrap-top-quick-contact-info">
+            <span style="color: #152c55;"><i class="icon-location2" style="color: #152c55;"></i>Brooklyghbfhbgfhn, NY 10036, United States</span>
+            <span style="color: #152c55;"><i class="icon-phone2" style="color: #152c55;"></i>+1-123-456-7890</span>
+            <span style="color: #152c55;"><i class="icon-mail" style="color: #152c55;"></i>info@uicookies.com</span>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 probootstrap-top-social">
+            <ul>
+              <li><a href="#"><i class="icon-twitter" style="color: #152c55;"></i></a></li>
+              <li><a href="#"><i class="icon-facebook2" style="color: #152c55;"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2" style="color: #152c55;"></i></a></li>
+              <li><a href="#"><i class="icon-youtube" style="color: #152c55;"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="probootstrap-header-top1 hidden-xs visible-sm-block visible-md-block visible-lg-block" style="background: linear-gradient(rgb(0, 0, 0),#152c55);">
+      <div class="container">
+          <div class="row">
+              <!-- Logo and Heading -->
+              <a class="navbar-sai" href="{% url 'home' %}">
+                  <img src="{% static '/img/fth.png' %}" alt="Logo" class="logo" height="200" width="200">
+                  <span class="heading ms-5" style="font-family: 'Times New Roman', Times, serif;color: white;font-size: 55px;text-transform: uppercase;">Sai Sidd Group of Institution</span>
+              </a>
+          </div>
+      </div>
+  </div>
+  
+  
+    <nav class="navbar navbar-default probootstrap-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Logo and Heading -->
+          <a class="navbar-sai hidden-sm hidden-md hidden-lg" href="{% url 'home' %}" title="uiCookies:Sai">
+              <img src="{% static '/img/fth.png' %}" alt="Logo" class="logo" height="50" width="50">
+              <span class="heading">Sai Sidd Group of Institution</span>
+          </a>
+        </div>
+
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="{% block title1 %}{% endblock %}"><a href="{% url 'home' %}"  style="color:black;font-family: 'Times New Roman', Times, serif;font-weight: bold;">Home</a></li>
+              <li class="{% block title2 %}{% endblock %}"><a href="{% url 'about' %}" style="color:black;font-family: 'Times New Roman', Times, serif;font-weight: bold;">About</a></li>
+              <li class="{% block title3 %}{% endblock %}"><a href="{% url 'courses' %}" style="color:black;font-family: 'Times New Roman', Times, serif;font-weight: bold;">Courses</a></li>
+              <li class="{% block title4 %}{% endblock %}"><a href="{% url 'admission' %}" style="color:black;font-family: 'Times New Roman', Times, serif;font-weight: bold;">Admission</a></li>
+              <li class="{% block title5 %}{% endblock %}"><a href="{% url 'gallery' %}" style="color:black;font-family: 'Times New Roman', Times, serif;font-weight: bold;">Gallery</a></li>
+              <li class="{% block title6 %}{% endblock %}"><a href="{% url 'contact' %}" style="color:black;font-family: 'Times New Roman', Times, serif;font-weight: bold;">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      var previousScroll = 0;
+      $(window).scroll(function() {
+        var currentScroll = $(this).scrollTop();
+        if (currentScroll > previousScroll) {
+          // Scroll down
+          $('.navbar').addClass('navbar-fixed-top');
+        } else {
+          // Scroll up
+          $('.navbar').removeClass('navbar-fixed-top');
+        }
+        previousScroll = currentScroll;
+      });
+    });
+    </script>
+
+    {% block content %}{% endblock %}
+
+    <section class="probootstrap-cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Get your admission now!</h2>
+            <a href="{% url 'admission' %}#admission_form" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Enroll</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="probootstrap-footer probootstrap-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="probootstrap-footer-widget">
+              <h3>About The SaiSidd</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
+              <h3>Social</h3>
+              <ul class="probootstrap-footer-social">
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-github"></i></a></li>
+                <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                <li><a href="#"><i class="icon-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-md-push-1">
+            <div class="probootstrap-footer-widget">
+              <h3>Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Teachers</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="probootstrap-footer-widget">
+              <h3>Contact Info</h3>
+              <ul class="probootstrap-contact-info">
+                <li><i class="icon-location2"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
+                <li><i class="icon-mail"></i><span>info@domain.com</span></li>
+                <li><i class="icon-phone2"></i><span>+123 456 7890</span></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div> 
+         <!-- END row -->
+        
+      </div>
+
+      <div class="probootstrap-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 text-left">
+              <p>&copy; 2024 <a href="">Sai-Sidd Group Of Institution</a>. All Rights Reserved by <a href="">saisidd.com</a></p>
+            </div>
+            <div class="col-md-4 probootstrap-back-to-top">
+              <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- END wrapper -->
+    
+
+    <script src="{% static '/js/scripts.min.js' %}"></script>
+    <script src="{% static '/js/main.min.js' %}"></script>
+    <script src="{% static '/js/custom.js' %}"></script>
+
+  </body>
+</html>

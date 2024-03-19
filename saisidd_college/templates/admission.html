@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title4 %}
+active
+{% endblock %}
+
+{% block content %}
+
+<section class="probootstrap-section" style="background-color: #152c55; height: 100vh; display: flex; justify-content: center; align-items: center;" id="admission_form">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <marquee behavior="scroll" direction="left">
+            <h3 style="color: #d8a025; font-family: 'Times New Roman', Times, serif;font-weight: bold;">Discover the future of medicine at SaiSidd and shape your future in healthcare!. Enroll now!</h3>
+          </marquee>
+        </div>
+      </div>    
+      <div class="row">
+        <!-- Content on the left side of the form -->
+        <div class="col-md-6">
+          <h2 style="color: white;font-family: 'Times New Roman', Times, serif;">Admission Form</h2>
+          <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident suscipit natus a cupiditate ab minus illum quaerat maxime inventore Ea consequatur consectetur hic provident dolor ab aliquam eveniet alias</p>
+        </div>
+        <!-- Form on the right side of the content -->
+        <div class="col-md-6">
+          <form action="submit.php" method="post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name" style="color: white;">Name:</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="mobile" style="color: white;">Mobile Number:</label>
+                  <input type="text" class="form-control" id="mobile" name="mobile" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email" style="color: white;">Email:</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="state" style="color: white;">State:</label>
+                  <input type="text" class="form-control" id="state" name="state" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="city" style="color: white;">City:</label>
+                  <input type="text" class="form-control" id="city" name="city" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="pincode" style="color: white;">Pincode:</label>
+                  <input type="text" class="form-control" id="pincode" name="pincode" required>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="department" style="color: white;">Department:</label>
+                  <select class="form-control" id="department" name="department" required>
+                    <option>Select Department</option>
+                    <option value="department1">B.Sc. Nursing</option>
+                    <option value="department2">Bachelor of Physiotherapy</option>
+                    <option value="department3">Bachelor of Pharmacy</option>
+                    <!-- <option value="department4">Department 4</option> -->
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="checkbox">
+                  <label style="color: white;"><input type="checkbox" name="agree" required> I agree to the terms and conditions</label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-default jiggle" style="background-color: #d8a025;color: white;">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+    <section class="probootstrap-section probootstrap-bg-light">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>College Facilities & Infrastructure</h2>
+            <p>Experience our state-of-the-art facilities and infrastructure designed to enhance your learning experience.</p>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 10px;">
+            <div class="facility">
+            <img src="{% static '/img/verbo_corousel1.jpg' %}" alt="Facility 1" class="img-responsive">
+            <div class="facility-details">
+                <h3>Library</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas unde fugiat voluptates repellat commodi aliquam, numquam minima quae incidunt iure.</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 10px;">
+            <div class="facility">
+            <img src="{% static '/img/verbo_corousel2.jpg' %}" alt="Facility 2" class="img-responsive">
+            <div class="facility-details">
+                <h3>Laboratories</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas unde fugiat voluptates repellat commodi aliquam, numquam minima quae incidunt iure.</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 10px;">
+            <div class="facility">
+            <img src="{% static '/img/verbo_corousel3.jpg' %}" alt="Facility 3" class="img-responsive">
+            <div class="facility-details">
+                <h3>Sports Facilities</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas unde fugiat voluptates repellat commodi aliquam, numquam minima quae incidunt iure.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+        <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 10px;">
+            <div class="facility">
+            <img src="{% static '/img/verbo_corousel2.jpg' %}" alt="Facility 1" class="img-responsive">
+            <div class="facility-details">
+                <h3>Library</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas unde fugiat voluptates repellat commodi aliquam, numquam minima quae incidunt iure.</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 10px;">
+            <div class="facility">
+            <img src="{% static '/img/verbo_corousel3.jpg' %}" alt="Facility 2" class="img-responsive">
+            <div class="facility-details">
+                <h3>Laboratories</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas unde fugiat voluptates repellat commodi aliquam, numquam minima quae incidunt iure.</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 10px;">
+            <div class="facility">
+            <img src="{% static '/img/verbo_corousel1.jpg' %}" alt="Facility 3" class="img-responsive">
+            <div class="facility-details">
+                <h3>Sports Facilities</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas unde fugiat voluptates repellat commodi aliquam, numquam minima quae incidunt iure.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+  
+    <section class="probootstrap-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>College Events and News</h2>
+                <p>Experience our state-of-the-art facilities and infrastructure designed to enhance your learning experience.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+                <a href="#" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel3.jpg' %}" alt="" class="img-responsive"></figure>
+                <div class="probootstrap-text">
+                    <h3>Tempora consectetur unde nisi</h3>
+                    <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                    <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+                <a href="#" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel2.jpg' %}" alt="" class="img-responsive"></figure>
+                <div class="probootstrap-text">
+                    <h3>Tempora consectetur unde nisi</h3>
+                    <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                    <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                </div>
+                </a>
+            </div>
+            <!-- <div class="clearfix visible-sm-block visible-xs-block"></div> -->
+            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+                <a href="#" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel1.jpg' %}" alt="" class="img-responsive"></figure>
+                <div class="probootstrap-text">
+                    <h3>Tempora consectetur unde nisi</h3>
+                    <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                    <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <!-- <div class="clearfix visible-md-block"></div> -->
+            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+              <a href="#" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel3.jpg' %}" alt="" class="img-responsive"></figure>
+                <div class="probootstrap-text">
+                  <h3>Tempora consectetur unde nisi</h3>
+                  <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                  <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                </div>
+              </a>
+            </div>
+            <!-- <div class="clearfix visible-sm-block visible-xs-block"></div> -->
+            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+              <a href="#" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel1.jpg' %}" alt="" class="img-responsive"></figure>
+                <div class="probootstrap-text">
+                  <h3>Tempora consectetur unde nisi</h3>
+                  <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                  <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 probootstrap-animate">
+              <a href="#" class="probootstrap-featured-news-box">
+                <figure class="probootstrap-media"><img src="{% static '/img/verbo_corousel2.jpg' %}" alt="" class="img-responsive"></figure>
+                <div class="probootstrap-text">
+                  <h3>Tempora consectetur unde nisi</h3>
+                  <span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+                  <span class="probootstrap-location"><i class="icon-location2"></i>White Palace, Brooklyn, NYC</span>
+                </div>
+              </a>
+            </div>
+            <!-- <div class="clearfix visible-sm-block visible-xs-block"></div> -->
+        </div>
+    </div>
+    </section>
+
+{% endblock %}
