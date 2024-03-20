@@ -367,16 +367,15 @@
     }
    
     /* CSS */
-.image-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .enlarge-image {
-    transition: transform 0.3s;
-  }
-  
-  .enlarge-image:hover {
-    transform: scale(1.1); /* Change the scale value to enlarge within its size */
-  }
-  
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .enlarge-image {
+        transition: transform 0.3s;
+    }
+
+    .enlarge-image:hover {
+        transform: scale(1.1); /* Change the scale value to enlarge within its size */
+    }
