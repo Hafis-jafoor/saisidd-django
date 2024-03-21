@@ -45,27 +45,76 @@ active
             <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
               <h2 style="font-family: 'Times New Roman', Times, serif;">Get In Touch</h2>
               <p>Contact us using the form below.</p>
-              <form action="#" method="post" class="probootstrap-form">
+              <form action="{% url 'contact' %}" method="post" class="probootstrap-form" id="contactForm">
+                {% csrf_token %}
                 <div class="form-group">
                   <label for="name">Full Name</label>
                   <input type="text" class="form-control" id="name" name="name">
+                  <small id="name-error" style="color: red; display: none;" class="mt-1">Name should contain only alphabets</small>
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
                   <input type="email" class="form-control" id="email" name="email">
+                  <small id="email-error" style="color: red; display: none;" class="mt-1">Please enter a valid email address</small>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Mobile Number</label>
+                  <input type="tel" class="form-control" id="phone" name="phone">
+                  <small id="phone-error" style="color: red; display: none;" class="mt-1">Please enter a valid 10-digit phone number</small>
                 </div>
                 <div class="form-group">
                   <label for="subject">Subject</label>
-                  <input type="text" class="form-control" id="subject" name="subject">
+                  <input type="text" class="form-control" id="subject" name="subject" required>
                 </div>
                 <div class="form-group">
                   <label for="message">Message</label>
-                  <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+                  <textarea cols="30" rows="10" class="form-control" id="message" name="message" required></textarea>
                 </div>
                 <div class="form-group">
                   <input type="submit" class="btn btn btn-lg jiggle" style="background-color: #152c55;color: white;" id="submit" name="submit" value="Send Message">
                 </div>
               </form>
+
+              <script>
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                    var nameInput = document.getElementById('name').value.trim();
+                    var emailInput = document.getElementById('email').value.trim();
+                    var phoneInput = document.getElementById('phone').value.trim();
+                    var subjectInput = document.getElementById('subject').value.trim();
+                    var messageInput = document.getElementById('message').value.trim();
+            
+                    var nameRegex = /^[a-zA-Z ]+$/;
+                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    var phoneRegex = /^[0-9]{10}$/;
+            
+                    var valid = true;
+            
+                    if (!nameRegex.test(nameInput)) {
+                        document.getElementById('name-error').style.display = 'block';
+                        valid = false;
+                    } else {
+                        document.getElementById('name-error').style.display = 'none';
+                    }
+            
+                    if (!emailRegex.test(emailInput)) {
+                        document.getElementById('email-error').style.display = 'block';
+                        valid = false;
+                    } else {
+                        document.getElementById('email-error').style.display = 'none';
+                    }
+            
+                    if (!phoneRegex.test(phoneInput)) {
+                        document.getElementById('phone-error').style.display = 'block';
+                        valid = false;
+                    } else {
+                        document.getElementById('phone-error').style.display = 'none';
+                    }
+            
+                    if (!valid) {
+                        event.preventDefault(); // Prevent form submission
+                    }
+                });
+            </script>
             </div>
           </div>
         </div>

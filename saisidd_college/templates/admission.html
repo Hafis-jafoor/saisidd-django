@@ -25,32 +25,42 @@ active
       </div>
       <!-- Form on the right side of the content -->
       <div class="col-md-6">
-        <form action="submit.php" method="post">
+        <form id="admissionForm" action="{% url 'admission' %}" method="post">
+          {% csrf_token %}
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="name" style="color: white;">Name:</label>
                 <input type="text" class="form-control" id="name" name="name" required>
+                <small id="name-error" style="color: red; display: none;">Name should contain only alphabets</small>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label for="mobile" style="color: white;">Mobile Number:</label>
-                <input type="text" class="form-control" id="mobile" name="mobile" required>
+                <label for="phone" style="color: white;">Mobile Number:</label>
+                <input type="text" class="form-control" id="phone" name="phone" required>
+                <small id="phone-error" style="color: red; display: none;">Please enter a valid phone number</small>
               </div>
             </div>
+          </div>
+          <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="email" style="color: white;">Email:</label>
                 <input type="email" class="form-control" id="email" name="email" required>
+                <small id="email-error" style="color: red; display: none;">Invalid email format</small>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label for="state" style="color: white;">State:</label>
-                <input type="text" class="form-control" id="state" name="state" required>
+                <select class="form-control" name="state" id="state" required>
+                  <option value="">Select State</option>
+                </select>
               </div>
             </div>
+          </div>
+          <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label for="city" style="color: white;">City:</label>
@@ -61,8 +71,11 @@ active
               <div class="form-group">
                 <label for="pincode" style="color: white;">Pincode:</label>
                 <input type="text" class="form-control" id="pincode" name="pincode" required>
+                <small id="pincode-error" style="color: red; display: none;">Pincode should be 6 digits</small>
               </div>
             </div>
+          </div>
+          <div class="row">
             <div class="col-md-12">
               <div class="form-group">
                 <label for="department" style="color: white;">Department:</label>
@@ -75,23 +88,92 @@ active
                 </select>
               </div>
             </div>
+          </div>
+          <div class="row">
             <div class="col-md-12">
               <div class="checkbox">
                 <label style="color: white;"><input type="checkbox" name="agree" required> I agree to the terms and conditions</label>
               </div>
             </div>
+          </div> 
+          <div class="row">
             <div class="col-md-12">
-              <button type="submit" class="btn btn-default jiggle" style="background-color: #d8a025;color: white;">Submit</button>
+              <input type="submit" class="btn btn-default jiggle" style="background-color: #d8a025;color: white;" name="submit">
             </div>
           </div>
         </form>
+
+        <script>
+          document.getElementById('admissionForm').addEventListener('submit', function(event) {
+              var nameInput = document.getElementById('name').value.trim();
+              var phoneInput = document.getElementById('phone').value.trim();
+              var emailInput = document.getElementById('email').value.trim();
+              var pincodeInput = document.getElementById('pincode').value.trim();
+      
+              var nameRegex = /^[a-zA-Z ]+$/;
+              var phoneRegex = /^[0-9]{10}$/;
+              var emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+              var pincodeRegex = /^\d{6}$/;
+      
+              var valid = true;
+      
+              if (!nameRegex.test(nameInput)) {
+                  document.getElementById('name-error').style.display = 'block';
+                  valid = false;
+              } else {
+                  document.getElementById('name-error').style.display = 'none';
+              }
+      
+              if (!phoneRegex.test(phoneInput)) {
+                  document.getElementById('phone-error').style.display = 'block';
+                  valid = false;
+              } else {
+                  document.getElementById('phone-error').style.display = 'none';
+              }
+      
+              if (!emailRegex.test(emailInput)) {
+                  document.getElementById('email-error').style.display = 'block';
+                  valid = false;
+              } else {
+                  document.getElementById('email-error').style.display = 'none';
+              }
+      
+              if (!pincodeRegex.test(pincodeInput)) {
+                  document.getElementById('pincode-error').style.display = 'block';
+                  valid = false;
+              } else {
+                  document.getElementById('pincode-error').style.display = 'none';
+              }
+      
+              if (!valid) {
+                  event.preventDefault(); // Prevent form submission
+              }
+          });
+      </script>
+       <script>
+          var indianStates = [
+              "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana",
+              "Himachal Pradesh", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur",
+              "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu",
+              "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal", "Andaman and Nicobar Islands",
+              "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi", "Lakshadweep", "Puducherry"
+          ];
+
+          var stateSelect = document.getElementById("state");
+
+          indianStates.forEach(function(state) {
+              var option = document.createElement("option");
+              option.text = state;
+              stateSelect.add(option);
+          });
+      </script>
       </div>
     </div>
   </div>
 </section>
   
   
-    <!-- <section class="probootstrap-section probootstrap-bg-light">
+    <section class="probootstrap-section probootstrap-bg-light">
     <div class="container">
         <div class="row">
         <div class="col-md-12 text-center">
@@ -131,7 +213,7 @@ active
         <div class="row" style="margin-top: 10px;">
         <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 10px;">
             <div class="facility">
-            <img src="{% static '/img/verbo_corousel2.jpg' %}" alt="Facility 1" class="img-responsive">
+            <img src="{% static '/img/verbo_corousel2.jpg' %}" alt="Facility 4" class="img-responsive">
             <div class="facility-details">
                 <h3>Library</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas unde fugiat voluptates repellat commodi aliquam, numquam minima quae incidunt iure.</p>
@@ -140,7 +222,7 @@ active
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 10px;">
             <div class="facility">
-            <img src="{% static '/img/verbo_corousel3.jpg' %}" alt="Facility 2" class="img-responsive">
+            <img src="{% static '/img/verbo_corousel3.jpg' %}" alt="Facility 5" class="img-responsive">
             <div class="facility-details">
                 <h3>Laboratories</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas unde fugiat voluptates repellat commodi aliquam, numquam minima quae incidunt iure.</p>
@@ -149,7 +231,7 @@ active
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12" style="margin-top: 10px;">
             <div class="facility">
-            <img src="{% static '/img/verbo_corousel1.jpg' %}" alt="Facility 3" class="img-responsive">
+            <img src="{% static '/img/verbo_corousel1.jpg' %}" alt="Facility 6" class="img-responsive">
             <div class="facility-details">
                 <h3>Sports Facilities</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas unde fugiat voluptates repellat commodi aliquam, numquam minima quae incidunt iure.</p>
@@ -233,6 +315,6 @@ active
             </div>
         </div>
     </div>
-    </section> -->
+    </section>
 
 {% endblock %}
