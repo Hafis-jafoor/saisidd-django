@@ -49,6 +49,18 @@
         }
     }
 
+    @media screen and (max-width: 430px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
     @media screen and (max-width: 768px) {
         .probootstrap-navbar .navbar-sai {
         top: 0px !important;

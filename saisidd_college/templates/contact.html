@@ -43,6 +43,13 @@ active
               </div>
             </div>
             <div class="col-md-7 col-md-push-1  probootstrap-animate" id="probootstrap-content">
+              {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
               <h2 style="font-family: 'Times New Roman', Times, serif;">Get In Touch</h2>
               <p>Contact us using the form below.</p>
               <form action="{% url 'contact' %}" method="post" class="probootstrap-form" id="contactForm">
