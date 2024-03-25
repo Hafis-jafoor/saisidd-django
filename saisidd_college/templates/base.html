@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{% static '/css/style1.css' %}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
+    
 </head>
 <body>
     
@@ -67,7 +67,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- Logo and Heading -->
-          <a class="navbar-sai hidden-sm hidden-md hidden-lg" href="{% url 'home' %}" title="uiCookies:Sai">
+          <a class="navbar-sai hidden-sm hidden-md hidden-lg" href="{% url 'home' %}" title="">
               <img src="{% static '/img/fth.png' %}" alt="Logo" class="logo" height="50" width="50">
               <span class="heading">Sai Sidd Group of Institution</span>
           </a>
@@ -111,7 +111,7 @@
         <div class="row">
           <div class="col-md-12">
             <h2 class="probootstrap-animate" data-animate-effect="fadeInRight">Get your admission now!</h2>
-            <a href="admission.html#admission_form" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Enroll</a>
+            <a href="{% url 'admission' %}#admission_form" role="button" class="btn btn-primary btn-lg btn-ghost probootstrap-animate" data-animate-effect="fadeInLeft">Enroll</a>
           </div>
         </div>
       </div>
@@ -127,8 +127,9 @@
               <ul class="probootstrap-footer-social">
                 <li><a href="#"><i class="icon-twitter"></i></a></li>
                 <li><a href="#"><i class="icon-facebook"></i></a></li>
-                <li><a href="#"><i class="icon-github"></i></a></li>
-                <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                <li><a href="#"><i class="icon-instagram2"></i></a></li>
+                <!-- <li><a href="#"><i class="icon-github"></i></a></li>
+                <li><a href="#"><i class="icon-dribbble"></i></a></li> -->
                 <li><a href="#"><i class="icon-linkedin"></i></a></li>
                 <li><a href="#"><i class="icon-youtube"></i></a></li>
               </ul>
@@ -138,11 +139,11 @@
             <div class="probootstrap-footer-widget">
               <h3>Links</h3>
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">gallery</a></li>
-                <li><a href="#">admission</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'courses' %}">Courses</a></li>
+                <li><a href="{% url 'gallery' %}">gallery</a></li>
+                <li><a href="{% url 'admission' %}#admission_form">admission</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
               </ul>
             </div>
           </div>

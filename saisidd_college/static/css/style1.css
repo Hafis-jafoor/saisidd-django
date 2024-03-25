@@ -8,12 +8,12 @@
         margin-right: 15px;
     }
 
-    @media screen and (max-width: 768px) {
+    /* @media screen and (max-width: 768px) {
         .navbar-sai {
         padding-top: 15px !important;
         padding-bottom: 15px !important;
         }
-    }
+    } */
 
     .probootstrap-navbar .navbar-sai {
         padding-top: 0 !important;
@@ -30,26 +30,164 @@
         transition: .2s all;
     }
 
-    @media screen and (max-width: 768px) {
+    /* @media screen and (max-width: 768px) {
         .probootstrap-navbar .navbar-sai {
         top: 5px !important;
         background-position: left 100%;
         }
-    }
-
-    @media screen and (max-width: 380px) {
+    } */
+    @media screen and (max-width: 678px) {
         .probootstrap-navbar .navbar-sai {
         top: 0px !important;
         }
         .probootstrap-navbar .navbar-sai .heading{
-            font-size: 11px;
+            font-size: 27px;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
             color: #152c55;
         }
     }
 
-    @media screen and (max-width: 430px) {
+    @media screen and (max-width: 658px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 26px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 638px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+    @media screen and (max-width: 618px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+    @media screen and (max-width: 598px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 23px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+    @media screen and (max-width: 578px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 22px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+    @media screen and (max-width: 558px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 21px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+    @media screen and (max-width: 538px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 518px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 19px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 17px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 460px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 440px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 15px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 428px) {
         .probootstrap-navbar .navbar-sai {
         top: 0px !important;
         }
@@ -61,7 +199,105 @@
         }
     }
 
+    @media screen and (max-width: 410px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 13px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 12px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+    @media screen and (max-width: 378px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 11px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 10px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+    
+    @media screen and (max-width: 345px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 9px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 330px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 8px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 7px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
+    @media screen and (max-width: 308px) {
+        .probootstrap-navbar .navbar-sai {
+        top: 0px !important;
+        }
+        .probootstrap-navbar .navbar-sai .heading{
+            font-size: 6px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #152c55;
+        }
+    }
+
     @media screen and (max-width: 768px) {
+        .navbar-sai {
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+        }
         .probootstrap-navbar .navbar-sai {
         top: 0px !important;
         }
@@ -71,7 +307,7 @@
             color: #152c55;
         }
     }
-  
+    
     @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .probootstrap-navbar .navbar-sai {
         position: relative;
@@ -361,7 +597,7 @@
     .facility:hover img {
         transform: scale(1.1);
     }
-      
+    
     .facility-details {
         position: absolute;
         top: 50%;
@@ -377,17 +613,18 @@
     .facility:hover .facility-details {
         opacity: 1;
     }
-   
+
     /* CSS */
     .image-container {
         position: relative;
         display: inline-block;
     }
-
+    
     .enlarge-image {
         transition: transform 0.3s;
     }
-
+    
     .enlarge-image:hover {
         transform: scale(1.1); /* Change the scale value to enlarge within its size */
     }
+    
