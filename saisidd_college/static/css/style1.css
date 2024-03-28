@@ -628,3 +628,78 @@
         transform: scale(1.1); /* Change the scale value to enlarge within its size */
     }
     
+    /* whats-app */
+    a{
+        text-decoration: none;
+    }
+    .whats-app {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 230px;
+        right: 25px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 50px;
+        z-index: 100;
+        animation: floatAnimation 2s infinite;
+    }
+    .my-float {
+        position: absolute;
+        margin-top: 5px;
+        margin-left: -22px;
+    }
+    /* call-picker */
+    .call-picker {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 300px;
+            right: 25px;
+            background-color: #007bff; /* Change color as needed */
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            z-index: 100;
+            line-height: 60px; /* Center icon vertically */
+            text-decoration: none; /* Remove underline from link */
+            animation: floatAnimation1 2s infinite;
+    }
+    .call-picker:hover {
+        background-color: #d8a025; /* Change color on hover as needed */
+    }
+    .call-picker i {
+        margin-top: 15px; /* Adjust icon position */
+    }
+    /* mega icon */
+    .my-float1 {
+        position: absolute;
+        margin-top: 8px;
+        margin-left: -20px;
+    }
+    .icons-wrapper {
+        display: none;
+        position: fixed;
+        bottom: 120px;
+        right: 25px;
+        z-index: 100;
+    }
+
+    .mega-icon {
+        position: fixed;
+        bottom: 150px;
+        right: 25px;
+        background-color: white;
+        color:#152c55;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 101; /* Make sure it's above icons-wrapper */
+        animation: floatAnimation 2s infinite;
+    }

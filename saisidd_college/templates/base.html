@@ -22,6 +22,31 @@
     
 </head>
 <body>
+
+  <div class="mega-icon">
+    <i class="fa fa-envelope my-float1"></i>
+  </div>
+  <div class="icons-wrapper">
+      <a class="call-picker" href="tel:+919947008466" target="_blank">
+          <i class="fa fa-phone"></i>
+      </a>
+      <a class="whats-app" href="https://wa.me/9947008466" target="_blank">
+          <i class="fab fa-whatsapp my-float"></i>
+
+      </a>
+  </div>
+
+  <script>
+      document.querySelector('.mega-icon').addEventListener('click', function() {
+          const iconsWrapper = document.querySelector('.icons-wrapper');
+          if (iconsWrapper.style.display === 'block') {
+              iconsWrapper.style.display = 'none';
+          } else {
+              iconsWrapper.style.display = 'block';
+          }
+      });
+  </script>
+
     
   <div class="container-fluid screen">
     <!-- Fixed navbar -->
